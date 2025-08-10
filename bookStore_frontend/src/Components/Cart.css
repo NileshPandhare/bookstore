@@ -1,0 +1,165 @@
+.cart-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  width: 60%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-size {
+  font-size: 14px;
+  color: gray;
+}
+
+.seller {
+  font-size: 14px;
+  color: gray;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.discounted-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.discount-percentage {
+  color: green;
+  font-weight: bold;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 30px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.quantity-controls span {
+  font-size: 16px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.save-for-later,
+.remove {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.remove {
+  color: red;
+}
+
+/* 🛒 TOTAL PRICE & PAYMENT BUTTON */
+.cart-total {
+  width: 60%;
+  margin: 20px auto;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.cart-total h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payment-button {
+  background-color: #ff9f00;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.payment-button:hover {
+  background-color: #ff7f00;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.empty-cart-image {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.empty-cart-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.shop-now-button {
+  background-color: #ff7f50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.shop-now-button:hover {
+  background-color: #ff4500;
+}
+

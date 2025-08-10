@@ -1,0 +1,11 @@
+.logo-style {
+    font-family: 'Brush Script MT'; /* Use a clean sans-serif font */
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: 600; /* Semi-bold weight */
+    letter-spacing: 0.2em; /* Add letter spacing */
+    text-transform: uppercase; /* Make text uppercase */
+    color: transparent;
+    background: linear-gradient(to right,#fcfcfb, #fefefd); /* Light to dark gray gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text;
+  }
