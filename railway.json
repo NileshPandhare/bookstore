@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+      "name": "backend",
+      "start": "dotnet run --project ./BookEcommerceNET/BookEcommerceNET.csproj",
+      "build": "dotnet build ./BookEcommerceNET/Bookstore.Api/Bookstore.Api.csproj"
+    },
+    {
+      "name": "frontend",
+      "start": "npm run start --prefix ./bookStore_frontend",
+      "build": "npm install --prefix ./bookStore_frontend && npm run build --prefix ./bookStore_frontend"
+    }
+  ]
+}
