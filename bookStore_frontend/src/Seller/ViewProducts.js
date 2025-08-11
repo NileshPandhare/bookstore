@@ -30,7 +30,7 @@ function ViewProducts() {
           },
         };
   
-        const response = await axios.get(`http://localhost:5050/seller/getProductsBySellerId/${userId}`, config); // Use axios.get with config
+        const response = await axios.get(`${Book_SERVICE_API_BASE_URL}/seller/getProductsBySellerId/${userId}`, config); // Use axios.get with config
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);

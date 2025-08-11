@@ -14,7 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5050",
+      "applicationUrl": "${Book_SERVICE_API_BASE_URL}",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

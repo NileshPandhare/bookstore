@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import Admin from "./Admin";
 import "./AddSeller.css"; // Reuse this for consistent styling
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function AddSeller() {
   const navigate = useNavigate();
@@ -81,7 +82,8 @@ function AddSeller() {
         };
 
       axios
-  .post("http://localhost:5050/admin/registerSeller", userData, config)
+  .post(`${Book_SERVICE_API_BASE_URL}/admin/registerSeller`, userData, config)
+
   .then((response) => {
     toast.success("Registration successful!");
 

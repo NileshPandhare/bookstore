@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./AddProduct.css";
 import Admin from "./Admin";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function AddProduct() {
   const [productName, setProductName] = useState("");
@@ -40,7 +41,11 @@ function AddProduct() {
         };
   
         // Make the request with the configuration
-        const response = await axios.get("http://localhost:5050/admin/getAllCategories", config);
+        // const response = await axios.get("${Book_SERVICE_API_BASE_URL}/admin/getAllCategories", config);
+        const response = await axios.get(
+  `${Book_SERVICE_API_BASE_URL}/admin/getAllCategories`,
+  config
+);
         setCategories(response.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -77,8 +82,14 @@ function AddProduct() {
         },
       };
     
-      const response = await axios.post("http://localhost:5050/admin/addProduct", formData, config);
+      // const response = await axios.post("${Book_SERVICE_API_BASE_URL}/admin/addProduct", formData, config);
     
+      const response = await axios.post(
+  `${Book_SERVICE_API_BASE_URL}/admin/addProduct`,
+  formData,
+  config
+);
+
       if (response.status === 200) {
         alert("Product added successfully!");
         setProductName("");

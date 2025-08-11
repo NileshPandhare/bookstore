@@ -6,6 +6,7 @@ import { BsCartFill } from "react-icons/bs";
 import { BsPersonCircle, BsListCheck } from "react-icons/bs";
 import { FaUserMd } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function CustomerNavbar({ cartCount }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Manage dropdown state

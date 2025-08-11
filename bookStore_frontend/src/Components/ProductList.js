@@ -4,6 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./ProductList.css";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function ProductList() {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ function ProductList() {
 
       try {
         const response = await axios.get(
-          `http://localhost:5050/admin/getProductsByCategory/${id}`,
+          `${Book_SERVICE_API_BASE_URL}/admin/getProductsByCategory/${id}`,
           config
         );
 
@@ -86,7 +87,7 @@ function ProductList() {
       };
 
       const response = await axios.post(
-        "http://localhost:5050/customer/addToCart",
+        "${Book_SERVICE_API_BASE_URL}/customer/addToCart",
         {
           userId,
           productId: product.productId,

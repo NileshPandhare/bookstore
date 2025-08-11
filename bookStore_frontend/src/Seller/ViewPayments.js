@@ -32,7 +32,7 @@ function ViewPayments() {
           },
         };
   
-        const response = await axios.get(`http://localhost:5050/seller/GetPaymentsForSeller/${sellerId}`, config); // Use axios.get with config
+        const response = await axios.get(`${Book_SERVICE_API_BASE_URL}/seller/GetPaymentsForSeller/${sellerId}`, config); // Use axios.get with config
         setPayments(response.data);
       } catch (error) {
         console.error("Error fetching payments:", error);

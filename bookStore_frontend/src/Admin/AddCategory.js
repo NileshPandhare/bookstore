@@ -4,6 +4,7 @@ import "./AddCategory.css";
 import { useNavigate } from "react-router-dom";
 import Admin from "./Admin";
 import "./AddCategory.css";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function AddCategory() {
   const [categoryName, setCategoryName] = useState("");
@@ -52,8 +53,14 @@ function AddCategory() {
         },
       };
     
-      const response = await axios.post("http://localhost:5050/admin/addCategory", formData, config);
+      // const response = await axios.post("${Book_SERVICE_API_BASE_URL}/admin/addCategory", formData, config);
     
+      const response = await axios.post(
+  `${Book_SERVICE_API_BASE_URL}/admin/addCategory`,
+  formData,
+  config
+);
+
       if (response.status === 201) {
         alert("Category added successfully!");
         setCategoryName("");

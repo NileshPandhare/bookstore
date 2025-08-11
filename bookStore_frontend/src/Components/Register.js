@@ -64,7 +64,7 @@ function Register() {
 
       // Make the API call to save the data
       axios
-        .post("http://localhost:5050/customer/registerUser", userData) // Your backend URL
+        .post("${Book_SERVICE_API_BASE_URL}/customer/registerUser", userData) // Your backend URL
         .then((response) => {
           toast.success("Registration successful!");
           navigate("/login"); // Redirect to the login page after successful registration

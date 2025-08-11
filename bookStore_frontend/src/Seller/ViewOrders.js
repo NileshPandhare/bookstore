@@ -32,7 +32,7 @@ function ViewOrders() {
           },
         };
   
-        const response = await axios.get(`http://localhost:5050/seller/getSoldProductsBySeller/${userId}`, config); // Use axios.get with config
+        const response = await axios.get(`${Book_SERVICE_API_BASE_URL}/seller/getSoldProductsBySeller/${userId}`, config); // Use axios.get with config
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);

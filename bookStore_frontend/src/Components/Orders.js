@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Orders.css";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function Orders() {
   const [orders, setOrders] = useState([]);
@@ -22,7 +23,7 @@ function Orders() {
       };
   
       const response = await axios.get(
-        `http://localhost:5050/customer/getOrdersByUserId/${id}`,
+        `${Book_SERVICE_API_BASE_URL}/customer/getOrdersByUserId/${id}`,
         config
       );
       setOrders(response.data || []);

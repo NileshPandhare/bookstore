@@ -3,6 +3,7 @@ import axios from "axios"; // Import axios
 import "./ViewAllSellers.css"; // Your custom styles
 import { useNavigate } from "react-router-dom";
 import Admin from "./Admin"; // Assuming Admin component is used for layout
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function ViewAllSeller() {
   const [sellers, setSellers] = useState([]);
@@ -31,7 +32,11 @@ function ViewAllSeller() {
           },
         };
   
-        const response = await axios.get("http://localhost:5050/admin/getAllSellers", config); // Use axios.get with config
+        // const response = await axios.get("${Book_SERVICE_API_BASE_URL}/admin/getAllSellers", config); // Use axios.get with config
+        const response = await axios.get(
+  `${Book_SERVICE_API_BASE_URL}/admin/getAllSellers`,
+  config
+);
         setSellers(response.data);
       } catch (error) {
         console.error("Error fetching payments:", error);

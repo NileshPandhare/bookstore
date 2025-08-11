@@ -7,6 +7,8 @@ import { FaHome, FaUserCircle, FaSignOutAlt } from 'react-icons/fa';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Styles.css";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
+
 function AdminNavbar() {
     const navigate = useNavigate(); 
     

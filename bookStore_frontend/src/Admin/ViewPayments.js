@@ -3,6 +3,8 @@ import axios from "axios"; // Import axios
 import "./ViewPayments.css"; // Your custom styles
 import { useNavigate } from "react-router-dom";
 import Admin from "./Admin";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
+
 
 function ViewPayments() {
   const [payments, setPayments] = useState([]);
@@ -31,7 +33,11 @@ function ViewPayments() {
           },
         };
   
-        const response = await axios.get("http://localhost:5050/admin/getAllPayments", config); // Use axios.get with config
+        // const response = await axios.get("${Book_SERVICE_API_BASE_URL}/admin/getAllPayments", config); // Use axios.get with config
+        const response = await axios.get(
+  `${Book_SERVICE_API_BASE_URL}/admin/getAllPayments`,
+  config
+);
         setPayments(response.data);
       } catch (error) {
         console.error("Error fetching payments:", error);

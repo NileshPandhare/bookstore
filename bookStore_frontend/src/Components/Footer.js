@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function Footer() {
   return (

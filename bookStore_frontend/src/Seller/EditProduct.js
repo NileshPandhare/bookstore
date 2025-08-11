@@ -25,8 +25,8 @@ function EditProduct() {
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
 
-  const editUrl = `http://localhost:5050/seller/GetProductById/${id}`;
-  const updateUrl = `http://localhost:5050/seller/updateProduct/${id}`;
+  const editUrl = `${Book_SERVICE_API_BASE_URL}/seller/GetProductById/${id}`;
+  const updateUrl = `${Book_SERVICE_API_BASE_URL}/seller/updateProduct/${id}`;
 
   // Configuration for headers with JWT token
   const config = {

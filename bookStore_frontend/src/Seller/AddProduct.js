@@ -42,7 +42,7 @@ function AddProduct() {
         };
   
         // Make the request with the configuration
-        const response = await axios.get("http://localhost:5050/admin/getAllCategories", config);
+        const response = await axios.get("${Book_SERVICE_API_BASE_URL}/admin/getAllCategories", config);
         setCategories(response.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -80,7 +80,7 @@ formData.append("UsertId", userId);              // FIXED typo
         },
       };
     
-      const response = await axios.post("http://localhost:5050/seller/addProduct", formData, config);
+      const response = await axios.post("${Book_SERVICE_API_BASE_URL}/seller/addProduct", formData, config);
     
       if (response.status === 200) {
         alert("Product added successfully!");

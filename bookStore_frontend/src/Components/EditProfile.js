@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function EditProfile() {
   const navigate = useNavigate();
@@ -14,8 +15,8 @@ function EditProfile() {
   const [pincode, setPincode] = useState("");
   const [address, setAddress] = useState("");
 
-  const editUrl = `http://localhost:5050/customer/getUserById/${id}`;
-  const updateUrl = `http://localhost:5050/customer/updateUser/${id}`;
+  const editUrl = `${Book_SERVICE_API_BASE_URL}/customer/getUserById/${id}`;
+  const updateUrl = `${Book_SERVICE_API_BASE_URL}/customer/updateUser/${id}`;
 
   useEffect(() => {
     const config = {

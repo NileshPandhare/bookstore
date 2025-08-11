@@ -3,6 +3,7 @@ import axios from "axios"; // Import axios
 import { useNavigate } from "react-router-dom";
 import "./ViewOrders.css";
 import Admin from "./Admin";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function ViewOrders() {
   const [orders, setOrders] = useState([]);
@@ -31,7 +32,11 @@ function ViewOrders() {
           },
         };
   
-        const response = await axios.get("http://localhost:5050/admin/getAllOrders", config); // Use axios.get with config
+        // const response = await axios.get("${Book_SERVICE_API_BASE_URL}/admin/getAllOrders", config); // Use axios.get with config
+        const response = await axios.get(
+  `${Book_SERVICE_API_BASE_URL}/admin/getAllOrders`,
+  config
+);
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);

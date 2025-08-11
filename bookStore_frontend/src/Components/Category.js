@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Category.css";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function Category() {
   const [categories, setCategories] = useState([]);
@@ -18,7 +19,7 @@ function Category() {
     };
   
     axios
-      .get("http://localhost:5050/admin/getAllCategories", config)
+      .get("${Book_SERVICE_API_BASE_URL}/admin/getAllCategories", config)
       .then((response) => {
         setCategories(response.data);
         setLoading(false);

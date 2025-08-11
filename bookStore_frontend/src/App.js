@@ -32,6 +32,7 @@ import ViewPaymentsS from "./Seller/ViewPayments";
 import ViewOrdersS from "./Seller/ViewOrders";
 import EditProductS from "./Seller/EditProduct";
 
+import { Book_SERVICE_API_BASE_URL } from '../BookURLs/BookURLs';
 
 // Layout wrapper to conditionally render navbar
 const AppLayout = ({ children, cartCount }) => {
@@ -56,9 +57,13 @@ function App() {
     const fetchCartCount = async () => {
       try {
         if (userId) {
+          // const response = await axios.get(
+          //   `${Book_SERVICE_API_BASE_URL}/customer/getCartByUserId/${userId}`
+          // );
           const response = await axios.get(
-            `http://localhost:5050/customer/getCartByUserId/${userId}`
-          );
+  `${Book_SERVICE_API_BASE_URL}/customer/getCartByUserId/${userId}`
+);
+
           setCartCount(response.data.length || 0);
         }
       } catch (error) {

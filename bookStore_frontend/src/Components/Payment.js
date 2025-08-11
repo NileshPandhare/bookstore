@@ -86,7 +86,7 @@
 //       };
 
 //       const orderResponse = await axios.post(
-//         `http://localhost:5050/customer/createOrder`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/createOrder`,
 //         orderPayload,
 //         config
 //       );
@@ -101,7 +101,7 @@
 //       };
 
 //       const paymentResponse = await axios.post(
-//         `http://localhost:5050/customer/processPayment`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/processPayment`,
 //         paymentPayload,
 //         config
 //       );
@@ -329,7 +329,7 @@
 //       };
 
 //       const orderResponse = await axios.post(
-//         `http://localhost:5050/customer/createOrder`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/createOrder`,
 //         orderPayload,
 //         config
 //       );
@@ -344,7 +344,7 @@
 //       };
 
 //       const paymentResponse = await axios.post(
-//         `http://localhost:5050/customer/processPayment`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/processPayment`,
 //         paymentPayload,
 //         config
 //       );
@@ -595,7 +595,7 @@
 //       };
 
 //       const orderResponse = await axios.post(
-//         `http://localhost:5050/customer/createOrder`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/createOrder`,
 //         orderPayload,
 //         config
 //       );
@@ -610,7 +610,7 @@
 //       };
 
 //       const paymentResponse = await axios.post(
-//         `http://localhost:5050/customer/processPayment`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/processPayment`,
 //         paymentPayload,
 //         config
 //       );
@@ -894,7 +894,7 @@
 //       };
 
 //       const orderResponse = await axios.post(
-//         `http://localhost:5050/customer/createOrder`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/createOrder`,
 //         orderPayload,
 //         config
 //       );
@@ -909,7 +909,7 @@
 //       };
 
 //       const paymentResponse = await axios.post(
-//         `http://localhost:5050/customer/processPayment`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/processPayment`,
 //         paymentPayload,
 //         config
 //       );
@@ -1180,7 +1180,7 @@
 //       };
 
 //       const orderResponse = await axios.post(
-//         `http://localhost:5050/customer/createOrder`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/createOrder`,
 //         orderPayload,
 //         config
 //       );
@@ -1195,7 +1195,7 @@
 //       };
 
 //       const paymentResponse = await axios.post(
-//         `http://localhost:5050/customer/processPayment`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/processPayment`,
 //         paymentPayload,
 //         config
 //       );
@@ -1633,7 +1633,7 @@ const generatePdfReceipt = (orderId, totalPrice, products, transactionId) => {
       };
 
       const orderResponse = await axios.post(
-        `http://localhost:5050/customer/createOrder`,
+        `${Book_SERVICE_API_BASE_URL}/customer/createOrder`,
         orderPayload,
         config
       );
@@ -1649,7 +1649,7 @@ const generatePdfReceipt = (orderId, totalPrice, products, transactionId) => {
       };
 
       const paymentResponse = await axios.post(
-        `http://localhost:5050/customer/processPayment`,
+        `${Book_SERVICE_API_BASE_URL}/customer/processPayment`,
         paymentPayload,
         config
       );

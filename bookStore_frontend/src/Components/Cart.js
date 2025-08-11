@@ -25,7 +25,7 @@
 //       };
   
 //       const response = await axios.get(
-//         `http://localhost:5050/customer/getCartByUserId/${userId}`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/getCartByUserId/${userId}`,
 //         config
 //       );
   
@@ -70,7 +70,7 @@
 //       };
   
 //       const response = await axios.delete(
-//         `http://localhost:5050/customer/removeProductFromCart`,
+//         `${Book_SERVICE_API_BASE_URL}/customer/removeProductFromCart`,
 //         config // Correctly pass the config with headers and params
 //       );
   
@@ -174,6 +174,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Cart.css";
+import { Book_SERVICE_API_BASE_URL } from '../BaseURLs/BaseURLs';
 
 function Cart({ setCartCount }) {
   const [cartItems, setCartItems] = useState([]);
@@ -195,7 +196,7 @@ function Cart({ setCartCount }) {
       };
 
       const response = await axios.get(
-        `http://localhost:5050/customer/getCartByUserId/${userId}`,
+        `${Book_SERVICE_API_BASE_URL}/customer/getCartByUserId/${userId}`,
         config
       );
 
@@ -235,7 +236,7 @@ function Cart({ setCartCount }) {
       };
 
       const response = await axios.delete(
-        `http://localhost:5050/customer/removeProductFromCart`,
+        `${Book_SERVICE_API_BASE_URL}/customer/removeProductFromCart`,
         config
       );
 
